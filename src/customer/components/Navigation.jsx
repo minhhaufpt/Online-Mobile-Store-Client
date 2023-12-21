@@ -39,10 +39,10 @@ export default function Navigation() {
   const handleLogout = () => {
     localStorage.removeItem("user");
     setTimeout(() => {
-      toast.info("Logout :(");
+      toast.info("Logout success:(");
     }, 10);
     setTimeout(() => {
-      navigate("/");
+      navigate("/login");
     }, 1000);
   };
 

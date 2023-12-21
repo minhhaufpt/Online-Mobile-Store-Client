@@ -5,6 +5,7 @@ import {
   productDetailService,
 } from "../../apiServices/productService";
 import Review from "./Review";
+import { toast } from "react-toastify";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState([]);
@@ -110,8 +111,8 @@ const ProductDetails = () => {
           method: "POST",
         }
       );
-
       setIsAddedToCart(true);
+      toast.success("Add cart success");
     } catch (error) {
       console.error("Error adding to cart:", error);
     }
